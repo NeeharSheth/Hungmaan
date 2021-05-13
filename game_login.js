@@ -6,6 +6,3 @@ function add_user(){
     window.location="game_page.html";
 }
 
-function send(){
-    console.log("send works");
-}
