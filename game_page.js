@@ -12,20 +12,11 @@ document.getElementById("playerQ").innerHTML= "Question Turn-"+player1_name;
 document.getElementById("playerA").innerHTML= "Answer Turn-"+ player2_name;
 
 function send(){
-    get_word= document.getElementById("word_input").value;
-word= get_word.toLowerCase();
-console.log(word);
-removed_word= word;
-no_of_underscore= Math.ceil(word.length/2);
-
-for (i=0; i<word.length-1; i++){
-    i=i+1;
-    char= removed_word.charAt(i);
-    removed_word= removed_word.replace(char,"_");
-    console.log(removed_word);
-    console.log(i);
-} 
-question_word= "<h4 id='word_display'> Q. "+removed_word+"</h4>";
+    number1= document.getElementById("num1").value;
+    number2= document.getElementById("num2").value;
+    answer= number1*number2;
+    question= number1+" X "+number2;
+question_word= "<h4 id='word_display'> Q. "+question+"</h4>";
 input_box="<br> Answer: <input type='text' id='input_checkbox'>";
 check_buton="<br><br><button class='btn btn-info' onclick='check()'>Check</button>";
 row= question_word+ input_box+ check_buton;
